@@ -1,4 +1,33 @@
 ﻿extends layout
 
 block content
-  h2 bookmarks
+  nav.navbar.navbar-inverse.navbar-static-top
+    div.navbar-header
+      a.navbar-brand(href="#") bookmarks
+    div.collapse.navbar-collapse
+      form.navbar-form.navbar-right(role="search")
+        div.form-group
+          input.form-control(type="text" placeholder="enter search text") 
+        button.btn.btn-default search
+        button.btn.btn-default add
+  
+  div.container
+    div.row
+      div.col-lg-12
+        dl
+          
+          dt NodeJS API
+          dd 
+            p The goal of this documentation is to comprehensively explain the Node.js API, both from a reference as well as a conceptual point of view. Each section describes a built-in module or high-level concept.
+            p
+              a(href="https://nodejs.org/api/documentation.html" target="_blank") https://nodejs.org/api/documentation.html
+            p 
+              a(href="#") remove
+          
+          dt NodeJS MongoDB
+          dd 
+            p Node JS MongoDB quick start guide. The guide will show you how to set up a simple application using Node.js and MongoDB. Its scope is only how to set up the driver and perform the simple CRUD operations. For more in-depth coverage, see the tutorials.
+            p 
+              a(href="http://mongodb.github.io/node-mongodb-native/2.2/quick-start" target="_blank") http://mongodb.github.io/node-mongodb-native/2.2/quick-start
+            p
+              a(href="#") remove
