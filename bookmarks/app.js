@@ -1,11 +1,10 @@
 ﻿(function () {
     var express = require('express');
-    var pug = require('pug');
 
     var app = express();
 
     app.set('views', './views');
-    app.set('view engine', 'pug');
+    app.set('view engine', 'jade');
 
     app.use(express.static('./public'));
 
