@@ -1,0 +1,14 @@
+{
+  "name": "bookmarks",
+  "version": "1.0.0",
+  "description": "bookmarks",
+  "main": "app.js",
+  "author": {
+    "name": "John Lao"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "pug": "*",
+    "stylus": "*"
+  }
+}
