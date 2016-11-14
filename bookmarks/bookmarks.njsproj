@@ -81,6 +81,7 @@
     <Folder Include="public\js\" />
     <Folder Include="public\fonts\" />
     <Folder Include="public\js\app\" />
+    <Folder Include="typings\globals\mongodb\" />
     <Folder Include="views\" />
     <Folder Include="public\" />
     <Folder Include="typings\" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mongodb\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\pug\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\stylus\index.d.ts" />

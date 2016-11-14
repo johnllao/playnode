@@ -9,6 +9,9 @@
     bookmarks.controller('indexctrl', ['$http', '$scope', function (http, model) {
 
         model.bookmarks = []; 
+        model.edit = function (bookmark) {
+            alert(bookmark._id);
+        };
 
         http.get('/api/bookmarks').then(function (res) {
             model.bookmarks = res.data;
