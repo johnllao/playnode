@@ -17,14 +17,14 @@
         res.render('index');
     };
 
-    var helpVersionApi = function (req, res) {
-        res.json({ version: '1.0.0' });
+    var bookmarksApi = function (req, res) {
+        res.json(data);
     };
 
     var routes = function (app) {
 
         app.get('/', indexView);
-        app.get('/api/help/version', helpVersionApi);
+        app.get('/api/bookmarks', bookmarksApi);
 
     };
 

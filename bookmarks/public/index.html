@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="bookmarks">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>bookmarks</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body ng-controller="indexctrl">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">bookmarks</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <form role="search" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="enter search text" class="form-control" />
+                    </div>
+                    <button class="btn btn-default">search</button>
+                    <button class="btn btn-default">new</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <dl ng-repeat="bookmark in bookmarks">
+                    <dt>{{ bookmark.title }}</dt>
+                    <dd> 
+                        <p>{{ bookmark.description }}</p>
+                        <p>
+                            <a href="{{ bookmark.link }}" target="_blank">{{ bookmark.link }}</a>
+                        </p>
+                        <p> 
+                            <a href="#">remove</a> | <a href="#">edit</a>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/app/bookmarks.js"></script>
+
+</body>
+</html>

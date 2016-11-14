@@ -33,15 +33,36 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="lib\routes.js" />
+    <Compile Include="public\js\angular-animate.js" />
+    <Compile Include="public\js\angular-animate.min.js" />
+    <Compile Include="public\js\angular-aria.js" />
+    <Compile Include="public\js\angular-aria.min.js" />
+    <Compile Include="public\js\angular-cookies.js" />
+    <Compile Include="public\js\angular-cookies.min.js" />
+    <Compile Include="public\js\angular-loader.js" />
+    <Compile Include="public\js\angular-loader.min.js" />
+    <Compile Include="public\js\angular-message-format.js" />
+    <Compile Include="public\js\angular-message-format.min.js" />
+    <Compile Include="public\js\angular-messages.js" />
+    <Compile Include="public\js\angular-messages.min.js" />
+    <Compile Include="public\js\angular-parse-ext.js" />
+    <Compile Include="public\js\angular-parse-ext.min.js" />
+    <Compile Include="public\js\angular-resource.js" />
+    <Compile Include="public\js\angular-resource.min.js" />
     <Compile Include="public\js\angular-route.js" />
     <Compile Include="public\js\angular-route.min.js" />
+    <Compile Include="public\js\angular-sanitize.js" />
+    <Compile Include="public\js\angular-sanitize.min.js" />
+    <Compile Include="public\js\angular-scenario.js" />
     <Compile Include="public\js\angular.js" />
     <Compile Include="public\js\angular.min.js" />
+    <Compile Include="public\js\app\bookmarks.js" />
     <Compile Include="public\js\bootstrap.js" />
     <Compile Include="public\js\bootstrap.min.js" />
     <Compile Include="public\js\jquery-3.1.1.js" />
     <Compile Include="public\js\jquery-3.1.1.min.js" />
     <Content Include="package.json" />
+    <Content Include="public\css\app.css" />
     <Content Include="public\css\bootstrap-theme.css" />
     <Content Include="public\css\bootstrap-theme.min.css" />
     <Content Include="public\css\bootstrap.css" />
@@ -51,15 +72,15 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\index.html" />
     <Content Include="README.md" />
-    <Content Include="views\index.jade" />
-    <Content Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
     <Folder Include="public\css\" />
     <Folder Include="public\js\" />
     <Folder Include="public\fonts\" />
+    <Folder Include="public\js\app\" />
     <Folder Include="views\" />
     <Folder Include="public\" />
     <Folder Include="typings\" />
