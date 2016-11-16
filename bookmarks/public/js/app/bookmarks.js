@@ -13,6 +13,10 @@
             alert(bookmark._id);
         };
 
+        model.delete = function (bookmark) {
+            alert(bookmark._id);
+        };
+
         http.get('/api/bookmarks').then(function (res) {
             model.bookmarks = res.data;
         }, apiError);

@@ -24,7 +24,7 @@
                         <input type="text" placeholder="enter search text" class="form-control" />
                     </div>
                     <button class="btn btn-default">search</button>
-                    <button class="btn btn-default">new</button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#addEditBookmarks">new</button>
                 </form>
             </div>
         </div>
@@ -41,7 +41,7 @@
                             <a href="{{ bookmark.link }}" target="_blank">{{ bookmark.link }}</a>
                         </p>
                         <p> 
-                            <a href="#">remove</a> | <a href="#" ng-click="edit(bookmark)">edit</a>
+                            <a href="#" ng-click="delete(bookmark)">remove</a> | <a href="#" data-toggle="modal" data-target="#addEditBookmarks"">edit</a>
                         </p>
                     </dd>
                 </dl>
@@ -50,6 +50,44 @@
     </div>
 
     <script type="text/javascript" src="js/app/bookmarks.js"></script>
+
+    <div class="modal fade" id="addEditBookmarks" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Add / Edit Bookmark</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtId" class="control-label">ID</label>
+                            <input type="text" class="form-control" id="txtId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTitle" class="control-label">Title</label>
+                            <textarea class="form-control" id="txtTitle"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDescription" class="control-label">Description</label>
+                            <textarea class="form-control" id="txtDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtlink" class="control-label">Link</label>
+                            <textarea class="form-control" id="txtLink"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
