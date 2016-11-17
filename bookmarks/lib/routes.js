@@ -1,22 +1,18 @@
 ﻿(function () {
 
-    var db = require('mongodb').MongoClient;
-    var MONGODB_URL = 'mongodb://localhost:27017/bookmarks';
+    var db = require('./database')
 
-    var bookmarksApi = function (req, res) {
+    var getBookmarks = function (req, res) {
 
-        // Use connect method to connect to the server
-        db.connect(MONGODB_URL, function (err, db) {
-            var list = db.collection('bookmarks').find({}).limit(20).toArray(function (err, data) {
-                res.json(data);
-                db.close();
-            });
+        db.get('bookmarks', {}, function (data) {
+            res.json(data);
         });
+
     };
 
     var routes = function (app) {
 
-        app.get('/api/bookmarks', bookmarksApi);
+        app.get('/api/bookmarks', getBookmarks);
 
     };
 

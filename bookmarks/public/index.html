@@ -16,7 +16,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand">bookmarks</a>
+                <a href="#" class="navbar-brand" style="color: #fff;">bookmarks</a>
             </div>
             <div class="collapse navbar-collapse">
                 <form role="search" class="navbar-form navbar-right">
@@ -24,7 +24,7 @@
                         <input type="text" placeholder="enter search text" class="form-control" />
                     </div>
                     <button class="btn btn-default">search</button>
-                    <button class="btn btn-default" data-toggle="modal" data-target="#addEditBookmarks">new</button>
+                    <button class="btn btn-default" ng-click="add()" data-toggle="modal" data-target="#addEditBookmarks">new</button>
                 </form>
             </div>
         </div>
@@ -41,7 +41,7 @@
                             <a href="{{ bookmark.link }}" target="_blank">{{ bookmark.link }}</a>
                         </p>
                         <p> 
-                            <a href="#" ng-click="delete(bookmark)">remove</a> | <a href="#" data-toggle="modal" data-target="#addEditBookmarks"">edit</a>
+                            <a href="#" ng-click="delete(bookmark)">remove</a> | <a href="#" ng-click="edit(bookmark)" data-toggle="modal" data-target="#addEditBookmarks">edit</a>
                         </p>
                     </dd>
                 </dl>
@@ -61,28 +61,30 @@
                     <h4 class="modal-title" id="exampleModalLabel">Add / Edit Bookmark</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="txtId" class="control-label">ID</label>
-                            <input type="text" class="form-control" id="txtId" />
+                            <label for="txtTitle" class="control-label col-lg-2">Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="txtTitle" ng-model="selectedBookmark.title" />
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="txtTitle" class="control-label">Title</label>
-                            <textarea class="form-control" id="txtTitle"></textarea>
+                            <label for="txtDescription" class="control-label col-lg-2">Description</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="txtDescription" ng-model="selectedBookmark.description" />
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="txtDescription" class="control-label">Description</label>
-                            <textarea class="form-control" id="txtDescription"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="txtlink" class="control-label">Link</label>
-                            <textarea class="form-control" id="txtLink"></textarea>
+                            <label for="txtlink" class="control-label col-lg-2">Link</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="txtLink" ng-model="selectedBookmark.link" />
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
 
             </div>

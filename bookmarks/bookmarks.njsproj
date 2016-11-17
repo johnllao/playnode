@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="lib\database.js" />
     <Compile Include="lib\routes.js" />
     <Compile Include="public\js\angular-animate.js" />
     <Compile Include="public\js\angular-animate.min.js" />

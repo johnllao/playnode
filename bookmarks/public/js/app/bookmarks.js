@@ -9,12 +9,24 @@
     bookmarks.controller('indexctrl', ['$http', '$scope', function (http, model) {
 
         model.bookmarks = []; 
+        model.selectedBookmark = {};
+
+        model.add = function () {
+            model.selectedBookmark = {};
+        };
+
         model.edit = function (bookmark) {
-            alert(bookmark._id);
+            var b = {
+                _id: bookmark._id,
+                title: bookmark.title,
+                description: bookmark.description,
+                link: bookmark.link
+            };
+            model.selectedBookmark = b;
         };
 
         model.delete = function (bookmark) {
-            alert(bookmark._id);
+            model.selectedBookmark = bookmark;
         };
 
         http.get('/api/bookmarks').then(function (res) {
