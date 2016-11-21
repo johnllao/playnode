@@ -3,15 +3,29 @@
     var MONGODB_URL = 'mongodb://localhost:27017/bookmarks';
 
     exports.get = function (collectionName, filter, populate) {
-        // Use connect method to connect to the server
-        db.connect(MONGODB_URL, function (err, db, result) {
+        
+        db.connect(MONGODB_URL, function (connectErr, db, result) {
             var list = db.collection(collectionName)
-                .find(filter)
-                .toArray(function (err, data) {
-                    populate(data);
-                    db.close();
-                });
+                         .find(filter)
+                         .toArray(function (findErr, data) {
+                             populate(data);
+                             db.close();
+                         });
         });
+
+    };
+
+    exports.insert = function (collectionName, id, data, inserted) {
+
+        db.connect(MONGODB_URL, function (connectErr, db, result) {
+            db.collection(collectionName)
+              .insertOne(data, { w: 1 }, function (insertErr, insertResult) {
+                  
+              });
+            db.close();
+            inserted();
+        });
+
     };
 
 })();

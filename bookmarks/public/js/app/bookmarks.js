@@ -6,7 +6,7 @@
         alert(res.data);
     };
 
-    bookmarks.controller('indexctrl', ['$http', '$scope', function (http, model) {
+    bookmarks.controller('bookmarksctrl', ['$http', '$scope', function (http, model) {
 
         model.bookmarks = []; 
         model.selectedBookmark = {};
